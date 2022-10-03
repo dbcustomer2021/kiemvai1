@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+nav{
+  padding: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  li {
+    margin: 5px;
+    display: inline;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 3px;
+  }
+  a{
+    text-decoration: none;
+    padding: 5px;
+    
+  }
+
+ 
+
+  .nav li:not(.selected) {
+    background-color: white;
+    color: white;
+    
+}
+
+.nav .selected, .nav li:hover {
+    background-color: gray;
+    color: white;
+}
+.nav .selected a, .nav li:hover a {
+  color: white;
+}
+
+
+  .containermap{
+    width: 80%;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .imagemap{
+    position: absolute;
+    z-index: 2; 
+    right: 250px;
+    width: 300px;
+    height: 300px;
+   
+  }
+  
+
+
+
+.card-body {
+    min-height: 300px;
+    min-width: 300px;
+    margin-right: 5px;
+}
+
+
+

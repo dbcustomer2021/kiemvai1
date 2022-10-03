@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kiểm Vải</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" target="_blank" href="style.css?v=0.003">
+    <script src="product.js" defer></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  </head>
+  <body>
+    <div class="container" style="margin-top: 10px">
+      <div class="row">
+         <div class="col-md-12">
+          <div class="nav" style="float:right;">
+            <ul> 
+              <li ><a href="index.html">TOTAL</a></li> 
+              <li class="selected"><a href="Chitiet.html">Chi Tiết</a></li> 
+            </ul>
+         </div>
+         </div>
+         <div class="col-md-12"> <hr></div>
+      </div>
+    </div>
+    <div class="container" style="width: 300px;">
+      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="idMAHang">
+        <option selected>Chọn mã hàng</option>
+      </select>
+     
+    </div>
+    <div class="container-fuild">
+       
+    </div>
+    <div class="container-fuild" style="margin-left: 20px ; margin-right: 20px;z-index: 2; display: none;" id="mahangstyle2">
+       <div class="row">
+          <div class="col-5">
+               <select class="form-select" aria-label=".form-select-lg example" id="idNgayFillter">
+                    <option selected>Lọc ngày</option>
+                   </select>
+           </div>
+           <div class="col-1">
+               <button type="button" class="btn btn-primary">Excel</button>
+           </div>
+        </div>
+        <div style="height: 10px;"></div>
+        
+
+      <table class="table table-fixed table-hover table-fixed table-bordered text-center  data-toggle="table"
+             data-search="true"
+             data-filter-control="true" 
+             data-show-export="true"
+             data-click-to-select="true"
+             data-toolbar="#toolbar"" style="border: 2px;">
+         <thead class="sticky-top" style="color:white; background-color: teal;">
+          <tr>
+            <th  style="width:90px ;padding: 2px">Ngày kiểm</th>
+            <th  style="width:40px">Số máy</th>
+            <th scope="col" style="width:35px">Ca</th>  
+            <th scope="col" style="width:90px">Ngày cắt vải</th>
+            <th scope="col" style="width:35px">Stt</th>
+            <th scope="col" style="width:40px">Phân loại</th>
+            <th scope="col" style="width:50px">Số mét</th>
+            <th scope="col" style="width:60px">Người kiểm</th>
+            <th  colspan="2" style="width:60px">Dầy Chớn Ngan</th>
+            <th scope="col" colspan="2" style="width:60px">Thưa</th>
+            <th scope="col" colspan="2" style="width:60px">Lát ngang khúc</th>
+            <th scope="col" colspan="2" style="width:60px">Rút sợi</th>
+            <th colspan="2" style="width:60px">Dọc</th>
+            <th scope="col" colspan="2" style="width:60px">Dầu</th>
+            <th scope="col" colspan="2" style="width:60px">Dơ</th>
+            <th scope="col" style="width:200px">Ghi chú</th>
+            <th style="width:60px">Xóa</th>
+          
+          </tr>
+         </thead>
+         <tbody class="table-group-divider" id="MahangInfo">
+         
+        </tbody>
+      </table>
+    </div>
+     
+    <div class="container-fuild" style="margin-left: 20px ; margin-right: 20px; display: none;" id="mahangstyle1">
+      <div class="row">
+          <div class="col-md-2">
+               <select class="form-select" aria-label=".form-select-lg example" id="idMAHangFilter">
+                    <option selected>Lọc ngày</option>
+                   </select>
+           </div>
+          
+            <div class="col-md-9">
+              
+           </div>
+           <div class="col-md-1">
+               <button type="button" class="btn btn-primary">Excel</button>
+           </div>
+        </div>
+        <div style="height: 10px;"></div>
+      <table class="table table-bordered table-striped text-center" style="border: 2px;">
+         <thead class="sticky-top" style="color:white; background-color: teal;">
+          <tr>
+            <th scope="col" style="width:100px">Ngày kiểm</th>
+             <th scope="col" style="width:170px">Mã hàng</th>
+             <th scope="col" style="width:50px">Số máy</th>
+             <th scope="col" style="width:50px">Ca</th>
+             <th scope="col" style="width:100px">Ngày cắt vải</th>
+             <th scope="col" style="width:50px">Stt</th>
+             <th scope="col" style="width:50px">Phân loại</th>
+             <th scope="col" style="width:50px">Số mét</th>
+             <th scope="col" style="width:80px">Người kiểm</th>
+             <th scope="col" style="width:80px">0 - 100</th>
+             <th scope="col" style="width:80px">100 - 200</th>
+             <th scope="col" style="width:80px">200 - 300</th>
+             <th scope="col" style="width:80px">300 - 400</th>
+             <th scope="col" style="width:80px">400 - 500</th>
+             <th scope="col" >Ghi chú</th>
+             <th style="width:80px">Xóa</th>
+           </tr>
+         </thead>
+         <tbody class="table-group-divider" id="MahangInfo1">
+         
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </body>
+</html>
